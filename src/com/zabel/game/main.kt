@@ -2,8 +2,6 @@ package com.zabel.game
 
 import com.zabel.data.Direction
 import com.zabel.data.PlayerAction
-import com.zabel.game.getInput
-import java.util.*
 
 /**
  * Created by mattlangreder on 1/27/16.
@@ -15,16 +13,11 @@ fun main(args: Array<String>) {
     // build locations
 
     // Title Screen
-    println("+-------------------------------+")
+    println("---------------------------------")
     println("| Zabel's Exploratorium |")
     println("| Enter commands at the prompt")
     println("| You can use the 'help' command to see available commands")
-    println("+-------------------------------+")
-
-//    Sounds.playTitleMusic()
-
-    // Print starting room description
-//    Rooms.print(room, x, y)
+    println("---------------------------------")
 
     // Start game loop
     var playing = true
@@ -41,17 +34,6 @@ fun main(args: Array<String>) {
             PlayerAction.LOOK.actionName -> performLook(userInput[1])
 
         }
-//        } else if (input == "quit") {
-//            println("Goodbye!")
-//            playing = false
-
-            // Catch-all for invalid input
-//        } else {
-//            println("You can't do that.")
-//        }// Quit commands
-        // Inventory commands
-        // Get commands
-        // Look commands
     }
 }
 

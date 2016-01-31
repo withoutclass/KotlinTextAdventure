@@ -6,7 +6,7 @@ package com.zabel.game
 
 fun getInput(): String {
     var input: String? = null
-    while(input == null) {
+    while (input == null) {
         print("> ")
         input = readLine()
     }
