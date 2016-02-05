@@ -2,15 +2,15 @@ package com.zabel.game
 
 import com.zabel.data.Direction
 import com.zabel.data.PlayerAction
+import com.zabel.data.performLook
+import com.zabel.data.performMove
 
 /**
  * Created by mattlangreder on 1/27/16.
  */
 
 fun main(args: Array<String>) {
-
-    val directions = Direction.DOWN
-    // build locations
+    // TODO: build WorldGraph
 
     // Title Screen
     println("---------------------------------")
@@ -37,18 +37,6 @@ fun main(args: Array<String>) {
             }
         }
     }
-}
-
-fun performMove(directionToMove: String) {
-    // TODO: parse direction
-    // TODO: get @Exit() from direction
-    // TODO: determine vertex from direction
-    println("you head to the $directionToMove")
-}
-
-fun performLook(directionToLook: String) {
-    // TODO:
-    println("You look to the $directionToLook")
 }
 
 fun showHelp() {
