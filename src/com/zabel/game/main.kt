@@ -28,11 +28,13 @@ fun main(args: Array<String>) {
         val userInput: List<String> = getInput().split(delimiters = ' ')
 
         when (userInput.first()) {
-            "quit" -> System.exit(0)
+            "quit","exit" -> System.exit(0)
             "help" -> showHelp()
             PlayerAction.GO.actionName -> performMove(userInput[1])
             PlayerAction.LOOK.actionName -> performLook(userInput[1])
-
+            else -> {
+                println("Invalid Command.  You can use 'help' to see a list of commands")
+            }
         }
     }
 }
@@ -41,19 +43,26 @@ fun performMove(directionToMove: String) {
     // TODO: parse direction
     // TODO: get @Exit() from direction
     // TODO: determine vertex from direction
+    println("you head to the $directionToMove")
 }
 
 fun performLook(directionToLook: String) {
     // TODO:
+    println("You look to the $directionToLook")
 }
 
 fun showHelp() {
     // TODO: Print command list
-}
+    println("--------------------------------------------")
+    println("|               Command List               |")
+    println("1. go <direction>: Travel in given direction")
+    println("2. look <direction>: Look in given direction")
+    println("--------------------------------------------")
+    println("|               Direction List              ")
+    println("1. North")
+    println("2. South")
+    println("3. East")
+    println("4. West")
+    println("-----------------------------------------help---")
 
-//Direction.NORTH.longName, Direction.NORTH.shortName -> movePlayer(Direction.NORTH)
-//Direction.SOUTH.longName, Direction.SOUTH.shortName  -> movePlayer(Direction.SOUTH)
-//Direction.EAST.longName, Direction.EAST.shortName -> movePlayer(Direction.EAST)
-//Direction.WEST.longName, Direction.WEST.shortName -> movePlayer(Direction.WEST)
-//Direction.UP.longName, Direction.UP.shortName -> playerLook(Direction.UP)
-//Direction.DOWN.longName, Direction.DOWN.shortName -> playerLook(Direction.DOWN)
+}
