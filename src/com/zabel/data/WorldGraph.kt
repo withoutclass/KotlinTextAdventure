@@ -15,6 +15,7 @@ data class WorldGraph(val vertices: HashMap<Int, Location> = HashMap()) {
             val locMap = HashMap<Int, Location>()
             locMap.put(0, Location("Exploratorium Gates", "The gates to a most excellent place", ArrayList<Exit>()))
             locMap[0]?.addExit(Exit(Direction.NORTH, Pair(0, 1)))
+            // TODO: hallway location
             return WorldGraph(locMap)
         }
     }

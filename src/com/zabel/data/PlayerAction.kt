@@ -17,6 +17,7 @@ fun performMove(directionToMove: String) {
 }
 
 fun performLook(directionToLook: String) {
-    // TODO:
+    // TODO: parse direction
+    // TODO: use direction to print out what the player sees when looking
     println("You look to the $directionToLook")
 }
