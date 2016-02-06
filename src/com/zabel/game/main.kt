@@ -1,6 +1,5 @@
 package com.zabel.game
 
-import com.zabel.data.Direction
 import com.zabel.data.PlayerAction
 import com.zabel.data.performLook
 import com.zabel.data.performMove
