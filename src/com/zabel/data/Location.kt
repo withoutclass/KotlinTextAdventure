@@ -11,3 +11,8 @@ data class Exit(val direction: Direction, val edge: Pair<Int, Int>)
 fun Location.addExit(exit: Exit) {
     this.exits.add(exit)
 }
+
+fun Location.getExit(direction: Direction) : Exit{
+    // This is my first use of higher order in the game! Woooo
+    return exits.filter { it.direction == direction }.first()
+}
