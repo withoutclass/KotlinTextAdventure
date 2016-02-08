@@ -1,6 +1,7 @@
 package com.zabel.game
 
 import com.zabel.data.PlayerAction
+import com.zabel.data.WorldGraph
 import com.zabel.data.performLook
 import com.zabel.data.performMove
 
@@ -10,6 +11,7 @@ import com.zabel.data.performMove
 
 fun main(args: Array<String>) {
     // TODO: build WorldGraph
+    val world = WorldGraph.get()
 
     // Title Screen
     println("---------------------------------")

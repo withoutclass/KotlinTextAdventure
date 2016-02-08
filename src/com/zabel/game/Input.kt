@@ -13,8 +13,7 @@ fun getInput(): String {
 
     // TODO: prevent bad inputs
 
-    // Can't be null due to while capture
-    return input!!.toLowerCase()
+    return input.toLowerCase()
 }
 
 
