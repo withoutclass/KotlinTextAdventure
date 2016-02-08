@@ -11,7 +11,7 @@ import com.zabel.data.performMove
 
 fun main(args: Array<String>) {
     // TODO: build WorldGraph
-    val world = WorldGraph.build()
+    val world = WorldGraph.get()
 
     // Title Screen
     println("---------------------------------")
