@@ -8,6 +8,8 @@ import java.util.*
  * Created by mattlangreder on 1/30/16.
  */
 
+// TODO: regular class, private constructor. Have the world graph build itself,
+//  singleton pattern
 data class WorldGraph(val vertices: HashMap<Int, Location> = HashMap()) {
 
     companion object Builder {
