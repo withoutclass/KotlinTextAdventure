@@ -18,6 +18,8 @@ data class WorldGraph private constructor(val vertices: HashMap<Int, Location> =
         // computed value for subsequent gets.  We can put the World building code in here to be invoked on the first get,
         // then use the main @{WorldGraph.get()} go grab an "instance" of the graph
         private val instance: WorldGraph by lazy {
+            // TODO: break out location creation into another function, and pass that function result to the WorldGraph
+            // Constructor
             val locMap = HashMap<Int, Location>()
             locMap.put(0, Location("Exploratorium Gates", "The gates to a most excellent place", ArrayList<Exit>()))
             locMap[0]?.addExit(Exit(Direction.NORTH, Pair(0, 1)))
