@@ -10,8 +10,6 @@ import com.zabel.data.performMove
  */
 
 fun main(args: Array<String>) {
-    // TODO: build WorldGraph
-    val world = WorldGraph.get()
 
     // Title Screen
     println("---------------------------------")
@@ -26,11 +24,11 @@ fun main(args: Array<String>) {
 
         // Get user input
         // Let's assume that getInput is doing the work of sanitizing what we get back
-        val userInput: List<String> = getInput().split(delimiters = ' ')
-
+        val userInput: List<String> = getInput().split(delimiters = ' ').map { it.toUpperCase() }
+        
         when (userInput.first()) {
-            "quit","exit" -> System.exit(0)
-            "help" -> showHelp()
+            "QUIT","EXIT", "Q" -> System.exit(0)
+            "HELP" -> showHelp()
             PlayerAction.GO.actionName -> performMove(userInput[1])
             PlayerAction.LOOK.actionName -> performLook(userInput[1])
             else -> {
