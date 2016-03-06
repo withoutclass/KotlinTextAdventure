@@ -14,9 +14,12 @@ fun performMove(directionToMove: String) {
     // TODO: get @Exit() from direction
     // TODO: determine vertex from direction
     val world = WorldGraph.get()
-    val location = world.getCurrentLocation()
+    val location = world.getNextLocation(Direction.valueOf(directionToMove))
     if (location != null) {
-        println("you head to the $directionToMove")
+        println("you head to the $directionToMove and find yourself in the ${location.roomTitle}")
+        // set the current location to the destination portion of the edge
+        // assume that since there is a next location that our current location isn't null
+        world.currentLocation = world.getCurrentLocation()!!.getExit(Direction.valueOf(directionToMove)).edge.second
     }
 }
 
