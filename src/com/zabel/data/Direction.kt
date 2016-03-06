@@ -29,3 +29,4 @@ fun String.isDirection(): Boolean {
 
     return false;
 }
+
